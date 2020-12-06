@@ -15,16 +15,13 @@ function setCounter1(max = 10) {
 console.log(setCounter());
 console.log(setCounter1());
 
+let arrayw: string[] = ['s', 's', 's'];
+console.log(arrayw);
 
-let arrayw : string[]= ["s","s","s"]
-console.log(arrayw)
-
-
-function increment(counter:number):number{
-	let c = counter
-	c = c +1
-	// return counter++
-	return c
-
+function increment(counter: number): number {
+  let c = counter;
+  c = c + 1;
+  // return counter++
+  return c;
 }
-console.log(increment(4))
+console.log(increment(4));
