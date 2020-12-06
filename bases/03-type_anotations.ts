@@ -45,7 +45,7 @@ greeting = function (name: string) {
   return `hi ${name}`;
 };
 
-greeting = function(name="william") {
+greeting = function (name = 'william') {
   console.log('Hello');
   return name;
 };
