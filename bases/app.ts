@@ -4,5 +4,3 @@ let heading = document.createElement('h1');
 heading.textContent = message;
 // add the heading the document
 document.body.appendChild(heading);
-
-const heading1 = document.querySelector('h1');
