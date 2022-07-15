@@ -25,3 +25,18 @@ function increment(counter: number): number {
   return c;
 }
 console.log(increment(4));
+
+
+
+console.log("=================================")
+
+let mycounter:number
+mycounter = 3
+
+console.log(mycounter)
+
+
+let mycounter2 = function(name:string){
+ return `${name} return string`
+}
+console.log(mycounter2("will"))
