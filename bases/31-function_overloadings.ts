@@ -11,10 +11,10 @@ function addString(a: string, b: string): string {
 
 console.log(addNumber(1, 2));
 console.log(addString('1', '2'));
-console.log("==================")
+console.log('==================');
 // podriamos hacer esto para optimizarlo
 
-function add(a: number | string, b: number | string): number |string {
+function add(a: number | string, b: number | string): number | string {
   if (typeof a === 'number' && typeof b === 'number') {
     return a + b;
   }
@@ -24,21 +24,20 @@ function add(a: number | string, b: number | string): number |string {
   }
 }
 
-console.log(add(3, "4"));
-console.log("==================")
-
+console.log(add(3, '4'));
+console.log('==================');
 
 // To better approach
 
-function addBetterApproach(a:number,b:number):number
-function addBetterApproach(a:string,b:string):string
-function addBetterApproach(a:any, b:any):any{
-	return a+ b
+function addBetterApproach(a: number, b: number): number;
+function addBetterApproach(a: string, b: string): string;
+function addBetterApproach(a: any, b: any): any {
+  return a + b;
 }
 
 console.log(addBetterApproach(10, 20));
 console.log(addBetterApproach('10', '20'));
-console.log("==================")
+console.log('==================');
 
 /*
 The count() function can return a number or an array 
@@ -46,20 +45,20 @@ depending on the number of argument that you pass into it:
 */
 
 class Counter {
-    private current: number = 0;
-    count(): number;
-    count(target: number): number[];
-    count(target?: number): number | number[] {
-        if (target) {
-            let values = [];
-            for (let start = this.current; start <= target; start++) {
-                values.push(start);
-            }
-            // this.current = target;
-            return values;
-        }
-        return ++this.current;
+  private current: number = 0;
+  count(): number;
+  count(target: number): number[];
+  count(target?: number): number | number[] {
+    if (target) {
+      let values = [];
+      for (let start = this.current; start <= target; start++) {
+        values.push(start);
+      }
+      // this.current = target;
+      return values;
     }
+    return ++this.current;
+  }
 }
 
 let counter = new Counter();
