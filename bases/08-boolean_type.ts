@@ -1,6 +1,6 @@
-let pending:boolean
+let pending: boolean;
 
-pending = false
-console.log(pending)
-pending = true
-console.log(pending)
+pending = false;
+console.log(pending);
+pending = true;
+console.log(pending);

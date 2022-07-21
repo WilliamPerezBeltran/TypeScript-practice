@@ -50,75 +50,47 @@ greeting = function (name = 'william') {
   return name;
 };
 
-console.log("===============================================")
+console.log('===============================================');
 
-let variable:string 
-console.log(typeof(variable) )
+let variable: string;
+console.log(typeof variable);
 
-variable = "camino a casa"
-console.log(variable)
+variable = 'camino a casa';
+console.log(variable);
 
-let variable1: string = "by defautl"
-console.log(variable1)
+let variable1: string = 'by defautl';
+console.log(variable1);
 
-let myArray: string[]
-console.log(myArray)
+let myArray: string[];
+console.log(myArray);
 
-let myArray1:string[] = ["a","d","c"]
-console.log(myArray1)
+let myArray1: string[] = ['a', 'd', 'c'];
+console.log(myArray1);
 
-let myArray2 : number[] = [1,2,3,4]
-console.log(myArray2)
+let myArray2: number[] = [1, 2, 3, 4];
+console.log(myArray2);
 
+let myArray3: (string | number)[];
+myArray3 = ['a', 1, 1, 2, 3, 4, 'r'];
+console.log(myArray3);
 
-let myArray3 :(string|number)[] 
-myArray3 = ["a",1,1,2,3,4,"r"]
-console.log(myArray3)
+let person1: {
+  name: string;
+  edad: number;
+};
 
+person1 = { name: 'ole', edad: 34 };
 
-let person1:{
-	name:string,
-	edad:number
-}
+let greetting: (name: string) => string;
 
-person1 = {name:"ole", edad:34}
+greetting = function (name: string) {
+  return 'return a string';
+};
 
+console.log(greetting('hola mundo'));
+let otraFuncition: (name: string) => number;
 
-let greetting:(name:string)=>string
-
-greetting = function(name:string){
-	return "return a string"
-}
-
-console.log(greetting("hola mundo"))
-let otraFuncition:(name:string)=>number
-
-otraFuncition =  (name:string)=>{
-	return 23
-}
-console.log(otraFuncition("hola mundo"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+otraFuncition = (name: string) => {
+  return 23;
+};
+console.log(otraFuncition('hola mundo'));

@@ -1,3 +1,3 @@
-let myTuple:[string,number]=["william",34]
+let myTuple: [string, number] = ['william', 34];
 
-console.log(myTuple)
+console.log(myTuple);

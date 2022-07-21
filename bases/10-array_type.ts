@@ -1,15 +1,12 @@
-let myArray:number[]
- myArray = [1,2,3,4,5,6]
+let myArray: number[];
+myArray = [1, 2, 3, 4, 5, 6];
 
+console.log(myArray);
 
- console.log(myArray)
+myArray.push(135345);
 
- myArray.push(135345)
+console.log(myArray);
 
-  console.log(myArray)
+let duplicate = myArray.map((x) => x + 10);
 
-
-
-let duplicate = myArray.map(x => x+10)
-
-console.log(duplicate)
+console.log(duplicate);

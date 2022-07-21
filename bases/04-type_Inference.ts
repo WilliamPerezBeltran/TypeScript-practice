@@ -26,17 +26,14 @@ function increment(counter: number): number {
 }
 console.log(increment(4));
 
+console.log('=================================');
 
+let mycounter: number;
+mycounter = 3;
 
-console.log("=================================")
+console.log(mycounter);
 
-let mycounter:number
-mycounter = 3
-
-console.log(mycounter)
-
-
-let mycounter2 = function(name:string){
- return `${name} return string`
-}
-console.log(mycounter2("will"))
+let mycounter2 = function (name: string) {
+  return `${name} return string`;
+};
+console.log(mycounter2('will'));
