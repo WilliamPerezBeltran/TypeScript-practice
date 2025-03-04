@@ -1,0 +1,5 @@
+1. language sintax exploration 
+2. Documentation 
+3. Techniques of the language => advent of code 
+3. WS chat client => WebSockets (WS)
+5. A porject 
