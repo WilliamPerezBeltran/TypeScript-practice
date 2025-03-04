@@ -48,3 +48,20 @@ npm install -D ts-node
 ```sh
 npx ts-node src/demo.ts
 ```
+
+#  TypeScript: Funciones e Interfaces
+
+##  Funciones
+
+- **Parámetros opcionales**: Se utilizan con `?`, y el operador **Nullish Coalescing (`??`)** permite asignar valores por defecto en caso de `null` o `undefined`.  
+- **Parámetros por defecto**: Se asignan valores predeterminados a los parámetros de la función.  
+- **Parámetros rest**: Se usa `...` para agrupar múltiples argumentos en un array.  
+- **Sobrecarga de métodos**: Permite definir múltiples firmas de función para manejar diferentes tipos de entrada.  
+
+## Interfaces
+
+- **Interfaces**: Definen la estructura de los objetos en TypeScript.  
+- **Estructuras complejas**: Interfaces que pueden contener funciones, arreglos u objetos anidados.  
+- **Extender interfaces**: Se usa `"extends"` para heredar propiedades de otra interfaz.  
+- **Solo lectura**: Se usa `"readonly"` para definir propiedades inmutables.  
+
