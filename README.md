@@ -66,3 +66,9 @@ npm run dev
 ## Licencia
 Este proyecto está bajo la licencia MIT.
 
+
+
+https://api.escuelajs.co/docs/
+https://quicktype.io/
+
+https://www.typescripttutorial.net

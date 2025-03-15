@@ -1,11 +1,10 @@
-function getdata():Promise<string>{
-	return new Promise((resolve,reject)=>{
-		setTimeout(()=>{
-			console.log(" 1 1 1 1");
-			resolve("2 2 2 2");
-		},2000);
-			
-	});
+function getdata(): Promise<string> {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log(" 1 1 1 1");
+      resolve("2 2 2 2");
+    }, 2000);
+  });
 }
 
 getdata();
@@ -16,105 +15,68 @@ getdata();
 	es un objecto que representa una operacion asincrona en la cual puede tener tres estados: pendiente, completado y rechazado.
 */
 
-
-function datos(){
-	return new Promise((resolve,reject)=>{
-		setTimeout(()=>{ 
-			console.log("3-3-3-3-3") 
-			resolve(console.log("4-4-4-4-4"))
-		},3000);
-
-	});
-
+function datos() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("3-3-3-3-3");
+      resolve(console.log("4-4-4-4-4"));
+    }, 3000);
+  });
 }
-datos().then((mensaje)=>console.log(mensaje));
+datos().then((mensaje) => console.log(mensaje));
 
-
-function obtenerData(){
-	return new Promise(()=>{
-		setTimeout(()=>{
-			console.log("Get data from the source ");
-		});
-	});
+function obtenerData() {
+  return new Promise(() => {
+    setTimeout(() => {
+      console.log("Get data from the source ");
+    });
+  });
 }
-async function ejecutar(){
-	try{
-		console.log("entro al try del ejecutar");
-		const resultado = await obtenerData();
-	}catch(err){
-		console.log( `funciont ejectuar error ${err}`);
-	}
+async function ejecutar() {
+  try {
+    console.log("entro al try del ejecutar");
+    const resultado = await obtenerData();
+  } catch (err) {
+    console.log(`funciont ejectuar error ${err}`);
+  }
 }
 
-ejecutar()
+ejecutar();
 
+class Usuario {
+  constructor(private name: string) {}
 
-
-class Usuario{
-	constructor(private name:string){}	
-
-	 obtenerPerfil(){
-		return new Promise(()=>{
-			setTimeout(()=>{
-				console.log("----------------execution------------");
-			},5000)
-		});
-	}
+  obtenerPerfil() {
+    return new Promise(() => {
+      setTimeout(() => {
+        console.log("----------------execution------------");
+      }, 5000);
+    });
+  }
 }
 const usuario = new Usuario("william");
 usuario.obtenerPerfil();
 
-
 console.log("---------------------");
 
 fetch("https://api.escuelajs.co/api/v1/users?limit=20")
-	.then(response => response.json())
-	.then(data => console.log(data))
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 
-
-
-
-function dataFetch(){
-	return fetch("https://api.escuelajs.co/api/v1/users?limit=20")
+function dataFetch() {
+  return;
 }
 
-async function williDatos(){
-	try{
-		const data = await dataFetch();
-		console.log(data);
-	}catch(err){
-		console.log(err);
-	}
+async function williDatos() {
+  try {
+    const response = await fetch(
+      "https://api.escuelajs.co/api/v1/users?limit=20",
+    );
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error(`Error: ${error}`);
+  }
 }
 
 williDatos();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
