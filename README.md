@@ -72,3 +72,23 @@ https://api.escuelajs.co/docs/
 https://quicktype.io/
 
 https://www.typescripttutorial.net
+https://www.entredata.org/aprendiendo-typescript/decoradores-en-typescript-anadiendo-poder-a-tu-codigo
+
+para decoradores 
+npm install class-validator --save
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
