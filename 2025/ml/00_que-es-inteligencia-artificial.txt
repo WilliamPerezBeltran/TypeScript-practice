@@ -1,0 +1,4 @@
+La inteligencia artificial es una rama de la informática que busca crear sistemas que sean capaces de realizar tareas humanas tales como 
+el aprendizaje automatizado, la toma de desiciones, el reconocimientos de patrones. Básicamente lo que tratan de hacer es imitar el comportamiento 
+humano de como hablan, piensan ,aprenden ,planean y entienden los humanos para poderlo aplicar a las maquinas. Esto se hace con técnicas de matemáticas, 
+áreas como estadística, probabilidad, cálculo vectorial y algebra lineal.
