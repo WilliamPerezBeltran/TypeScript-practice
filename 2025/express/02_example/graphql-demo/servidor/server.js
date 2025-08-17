@@ -4,10 +4,10 @@ import { graphqlHTTP } from 'express-graphql';
 import { loadSchemaSync } from '@graphql-tools/load';
 import { GraphQLFileLoader } from '@graphql-tools/graphql-file-loader';
 import { addResolversToSchema } from '@graphql-tools/schema';
+import { articles, users } from './data.js'; // Fake data
+import fs from 'fs';
 
-/* Import fake data */
-import { articles, users } from './data.js';
-
+// Definir resolvers
 const resolvers = {
     Query: {
         users: () => {
@@ -17,11 +17,11 @@ const resolvers = {
             }));
         },
         user: (obj, args) => {
-            const user = users.find(u => u.id === args.userId);
+            const user = users.find(u => u.id === args.id);
             if (user) {
                 return {
                     ...user,
-                    articles: articles.filter(a => a.author.id === args.userId)
+                    articles: articles.filter(a => a.author.id === user.id)
                 };
             }
             return null;
@@ -30,28 +30,37 @@ const resolvers = {
     }
 };
 
-// Load GraphQL schema
+// console.log("===============")
+// console.log(fs.readFileSync('./servidor/graphql/index.graphql', 'utf8'));
+
+// Cargar el esquema GraphQL desde el archivo
 const typeDefs = loadSchemaSync('./graphql/index.graphql', {
     loaders: [new GraphQLFileLoader()]
 });
 
-// Associate types with resolvers
+console.log("-------------------------");
+console.log(typeDefs);
+console.log(typeDefs);
+console.log(typeDefs);
+console.log(typeDefs);
+console.log(typeDefs);
+console.log("-------------------------")
+
+// Crear el schema con los resolvers
 const schema = addResolversToSchema({
     schema: typeDefs,
-    resolvers,
+    resolvers
 });
 
 const app = express();
 app.use(cors());
 
-// Setup GraphQL endpoint
+// Configurar el servidor GraphQL
 app.use('/graphql', graphqlHTTP({
     schema,
     graphiql: true
 }));
 
-// Start the server
-const PORT = 4000;
-app.listen(PORT, () => {
-    console.log(`Tu servidor GraphQL está corriendo en http://localhost:${PORT}/graphql`);
+app.listen(4000, () => {
+    console.log('Tu servidor GraphQL está corriendo en http://localhost:4000/graphql');
 });

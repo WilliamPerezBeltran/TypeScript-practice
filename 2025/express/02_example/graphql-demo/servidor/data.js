@@ -23,20 +23,16 @@
 //     users
 // }
 
-
-
-
-
 // Mock data
 import { faker } from '@faker-js/faker';
 
 const userCreator = () => ({
-    name: faker.person.firstName(), // Usar person en vez de name
+    name: faker.person.firstName(),
     email: faker.internet.email(),
-    id: faker.string.uuid() // Nueva API para UUID
+    id: faker.string.uuid()
 });
 
-const users = Array.from({ length: 7 }, userCreator);
+const users = [...new Array(7)].map(() => userCreator());
 
 const articleCreator = () => ({
     title: faker.lorem.words(5),
@@ -45,6 +41,6 @@ const articleCreator = () => ({
     author: faker.helpers.arrayElement(users) // Relación con User
 });
 
-const articles = Array.from({ length: 7 }, articleCreator);
+const articles = [...new Array(7)].map(() => articleCreator());
 
 export { articles, users };

@@ -5,7 +5,7 @@
 
 
 
-console.log("======================= Aplicando decoradores a una clase ============================");
+console.log("======================= Aplicando decoradores a una clase (afecta al contructor de la clase)============================");
 function decorator(constructor: Function){
 	console.log("splash");
 }

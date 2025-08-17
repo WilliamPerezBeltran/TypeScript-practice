@@ -17,12 +17,14 @@ type Query {
   Obtiene una lista de usuarios
   """
   users: [User]
+
   """
   Retorna un Usuario identificado por id
   """
-  user(id: String!): User!
+  user(id: String!): User
+
   """
-  Obtiene una lista de articulos
+  Obtiene una lista de artículos
   """
   articles: [Article]
 }
